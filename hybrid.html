@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carousel</title>
+    <title>Hybrid</title>
     <link rel="stylesheet" href="stylesheets/app.css" />
     <link rel="stylesheet" href="stylesheets/icomoo.css" />
     <link rel="stylesheet" href="stylesheets/climacons-font.css" />
@@ -17,6 +17,16 @@
   <body>
   <!--<div id="qunit"></div>
   <div id="qunit-fixture"></div>-->
+  
+  <div data-alert data-options="animation_speed:50;" class="alert-box alert">
+  	<div class="row">
+  		<div class="small-12 columns">
+  			<span class="label black">Breaking News</span>
+  			This is a breaking headline. Winter is coming.
+  			<a href="#" class="close">&times;</a>
+  		</div>
+  	</div>
+  </div>
   
   <div class="off-canvas-wrap">
   <div class="inner-wrap">
@@ -45,7 +55,6 @@
   	</ul>
   	<ul class="off-canvas-list">
   	<li><label>Local Links</label></li>
-	  	<li><a href="#">Obituaries</a></li>
 	  	<li><a href="#">Classifieds</a></li>
 	  	<li><a href="#">Shopping</a></li>
 	  	<li><a href="#">Jobs</a></li>
@@ -75,11 +84,11 @@
 	  </ul>
   </aside>
   	
-  	<section id="pushdown-row">
+  	<section id="leaderboard-row">
   		<div class="row">
   			<div class="small-12 columns">
-  				<div class="collapsed-pushdown-placeholder">
-  					Pushdown Ad
+  				<div class="leaderboard-placeholder">
+  					Leaderboard Ad
   				</div>
   			</div>
   		</div>
@@ -105,7 +114,7 @@
   		<nav id="main-menu-bar">
   			
   			<ul class="title-area">
-  				<li class="main-menu-bar-button"><a class="left-off-canvas-toggle" href="#"><span class="icon-menu"></span></a></li>
+  				<li class="main-menu-bar-button"><a class="left-off-canvas-toggle has-tip tip-right" href="#" data-tooltip title="Additional Sections"><span class="icon-menu"></span></a></li>
   				<li class="logo">
   					<a href="#lower-bar" class="pc-logo-img-link"><img class="pc-logo-img" src="img/pclogo.png" alt="pclogo"></a>
   				</li>
@@ -197,22 +206,22 @@
 	
 	<div id="news-dropdown" data-dropdown-content class="menu-dropdown">
 		<div class="row">
-			<div class="small-3 columns">
+			<div class="small-2 columns">
 					<h5>Categories</h5>
 					<ul class="no-bullet">
-						<li><a href="#">Education</a></li>
-						<li><a href="#">Local/State News</a></li>
-						<li><a href="#">The South</a></li>
+						<li><a href="#">Local</a></li>
 						<li><a href="#">Politics</a></li>
-						<li><a href="#">Nation</a></li>
-						<li><a href="#">Obituaries</a></li>
+						<li><a href="#">Crime</a></li>
+						<li><a href="#">Business</a></li>
+						<li><a href="#">Education</a></li>
+						<li><a href="#">South</a></li>
 					</ul>
 			</div><!--/col-->
-			<div class="small-6 columns">
+			<div class="small-7 columns">
 				<h5>Latest News</h5>
 				<div class="menu-story clearfix">
-				<a class="th" href="#"><img src="http://placehold.it/100x80"></a>
-				<h6 class="right">Sample Headline for a story blah blah blah</h6>
+				<a class="th left" href="#"><img src="http://placehold.it/100x80"></a>
+				<h6>Sample Headline for a story blah blah blah</h6>
 				</div>
 				<hr>
 				<h6>Sample Headline for a story blah blah blah</h6>
@@ -222,8 +231,14 @@
 			<div class="small-3 columns">
 				<h5>Additional Links</h5>
 					<ul class="no-bullet">
-						<li><a href="#">Hurricane Guide</a></li>
-						<li><a href="#">Traffic Cameras</a></li>
+						<li><a href="#">Hicks Column</a></li>
+						<li><a href="#">Wooten Column</a></li>
+						<li><a href="#">Palmetto Politics Blog</a></li>
+						<li><a href="#">Retail Blog</a></li>
+						<li><a href="#">Social Media Blog</a></li>
+						<li><a href="#">Homicide Map</a></li>
+						<li><a href="#">Forgotten SC</a></li>
+						<li><a href="#">Civil War</a></li>
 					</ul>
 			</div><!--/col-->
 		</div><!--/row-->						
@@ -231,22 +246,25 @@
 	
 	<div id="sports-dropdown" data-dropdown-content class="menu-dropdown">
 		<div class="row">
-			<div class="small-3 columns">
+			<div class="small-2 columns">
 					<h5>Categories</h5>
 					<ul class="no-bullet">
-						<li><a href="#">Education</a></li>
-						<li><a href="#">Local/State News</a></li>
-						<li><a href="#">The South</a></li>
-						<li><a href="#">Politics</a></li>
-						<li><a href="#">Nation</a></li>
-						<li><a href="#">Obituaries</a></li>
+						<li><a href="#">Preps</a></li>
+						<li><a href="#">South Carolina</a></li>
+						<li><a href="#">Clemson</a></li>
+						<li><a href="#">Local Colleges</a></li>
+						<li><a href="#">Minor Leagues</a></li>
+						<li><a href="#">Outdoors</a></li>
+						<li><a href="#">Golf</a></li>
+						<li><a href="#">Auto Racing</a></li>
+						<li><a href="#">National</a></li>
 					</ul>
 			</div><!--/col-->
-			<div class="small-6 columns">
+			<div class="small-7 columns">
 				<h5>Latest News</h5>
 				<div class="menu-story clearfix">
-				<a class="th" href="#"><img src="http://placehold.it/100x80"></a>
-				<h6 class="right">Sample Headline for a story blah blah blah</h6>
+				<a class="th left" href="#"><img src="http://placehold.it/100x80"></a>
+				<h6>Sample Headline for a story blah blah blah</h6>
 				</div>
 				<hr>
 				<h6>Sample Headline for a story blah blah blah</h6>
@@ -256,8 +274,12 @@
 			<div class="small-3 columns">
 				<h5>Additional Links</h5>
 					<ul class="no-bullet">
-						<li><a href="#">Hurricane Guide</a></li>
-						<li><a href="#">Traffic Cameras</a></li>
+						<li><a href="#">Sapakoff Column</a></li>
+						<li><a href="#">Recruiting News</a></li>
+						<li><a href="#">Clemson Blog</a></li>
+						<li><a href="#">South Carolina Blog</a></li>
+						<li><a href="#">Citadel Blog</a></li>
+						<li><a href="#">Minor Leagues Blog</a></li>
 					</ul>
 			</div><!--/col-->
 		</div><!--/row-->						
@@ -265,22 +287,23 @@
 
 	<div id="food-dropdown" data-dropdown-content class="menu-dropdown">
 		<div class="row">
-			<div class="small-3 columns">
+			<div class="small-2 columns">
 					<h5>Categories</h5>
 					<ul class="no-bullet">
-						<li><a href="#">Education</a></li>
-						<li><a href="#">Local/State News</a></li>
-						<li><a href="#">The South</a></li>
-						<li><a href="#">Politics</a></li>
-						<li><a href="#">Nation</a></li>
-						<li><a href="#">Obituaries</a></li>
+						<li><a href="#">Top News</a></li>
+						<li><a href="#">Reviews</a></li>
+						<li><a href="#">Events</a></li>
+						<li><a href="#">Openings</a></li>
+						<li><a href="#">Recipes</a></li>
+						<li><a href="#">Beverages</a></li>
+						<li><a href="#">Seasonal Foods</a></li>
 					</ul>
 			</div><!--/col-->
-			<div class="small-6 columns">
+			<div class="small-7 columns">
 				<h5>Latest News</h5>
 				<div class="menu-story clearfix">
-				<a class="th" href="#"><img src="http://placehold.it/100x80"></a>
-				<h6 class="right">Sample Headline for a story blah blah blah</h6>
+				<a class="th left" href="#"><img src="http://placehold.it/100x80"></a>
+				<h6>Sample Headline for a story blah blah blah</h6>
 				</div>
 				<hr>
 				<h6>Sample Headline for a story blah blah blah</h6>
@@ -290,8 +313,10 @@
 			<div class="small-3 columns">
 				<h5>Additional Links</h5>
 					<ul class="no-bullet">
-						<li><a href="#">Hurricane Guide</a></li>
-						<li><a href="#">Traffic Cameras</a></li>
+						<li><a href="#">Raskin Around Blog</a></li>
+						<li><a href="#">First Bites</a></li>
+						<li><a href="#">Photo Galleries</a></li>
+						<li><a href="#">Video Recipes</a></li>
 					</ul>
 			</div><!--/col-->
 		</div><!--/row-->						
@@ -299,22 +324,22 @@
 
 	<div id="entertainment-dropdown" data-dropdown-content class="menu-dropdown">
 		<div class="row">
-			<div class="small-3 columns">
+			<div class="small-2 columns">
 					<h5>Categories</h5>
 					<ul class="no-bullet">
-						<li><a href="#">Education</a></li>
-						<li><a href="#">Local/State News</a></li>
-						<li><a href="#">The South</a></li>
-						<li><a href="#">Politics</a></li>
-						<li><a href="#">Nation</a></li>
-						<li><a href="#">Obituaries</a></li>
+						<li><a href="#">Music</a></li>
+						<li><a href="#">Movies</a></li>
+						<li><a href="#">Television</a></li>
+						<li><a href="#">Events</a></li>
+						<li><a href="#">Games</a></li>
+						<li><a href="#">Comics</a></li>
 					</ul>
 			</div><!--/col-->
-			<div class="small-6 columns">
+			<div class="small-7 columns">
 				<h5>Latest News</h5>
 				<div class="menu-story clearfix">
-				<a class="th" href="#"><img src="http://placehold.it/100x80"></a>
-				<h6 class="right">Sample Headline for a story blah blah blah</h6>
+				<a class="th left" href="#"><img src="http://placehold.it/100x80"></a>
+				<h6>Sample Headline for a story blah blah blah</h6>
 				</div>
 				<hr>
 				<h6>Sample Headline for a story blah blah blah</h6>
@@ -324,8 +349,10 @@
 			<div class="small-3 columns">
 				<h5>Additional Links</h5>
 					<ul class="no-bullet">
-						<li><a href="#">Hurricane Guide</a></li>
-						<li><a href="#">Traffic Cameras</a></li>
+						<li><a href="#">Entertainment Blog</a></li>
+						<li><a href="#">Nugent Column</a></li>
+						<li><a href="#">Photo Galleries</a></li>
+						<li><a href="#">Maps & Tourism</a></li>
 					</ul>
 			</div><!--/col-->
 		</div><!--/row-->						
@@ -333,22 +360,24 @@
 
 	<div id="features-dropdown" data-dropdown-content class="menu-dropdown">
 		<div class="row">
-			<div class="small-3 columns">
+			<div class="small-2 columns">
 					<h5>Categories</h5>
 					<ul class="no-bullet">
-						<li><a href="#">Education</a></li>
-						<li><a href="#">Local/State News</a></li>
-						<li><a href="#">The South</a></li>
-						<li><a href="#">Politics</a></li>
-						<li><a href="#">Nation</a></li>
-						<li><a href="#">Obituaries</a></li>
+						<li><a href="#">Health</a></li>
+						<li><a href="#">Home & Garden</a></li>
+						<li><a href="#">Arts</a></li>
+						<li><a href="#">Travel</a></li>
+						<li><a href="#">Faith</a></li>
+						<li><a href="#">Books (not entertainment?)</a></li>
+						<li><a href="#">Profiles</a></li>
+						<li><a href="#">Pets</a></li>
 					</ul>
 			</div><!--/col-->
-			<div class="small-6 columns">
+			<div class="small-7 columns">
 				<h5>Latest News</h5>
 				<div class="menu-story clearfix">
-				<a class="th" href="#"><img src="http://placehold.it/100x80"></a>
-				<h6 class="right">Sample Headline for a story blah blah blah</h6>
+				<a class="th left" href="#"><img src="http://placehold.it/100x80"></a>
+				<h6>Sample Headline for a story blah blah blah</h6>
 				</div>
 				<hr>
 				<h6>Sample Headline for a story blah blah blah</h6>
@@ -358,8 +387,11 @@
 			<div class="small-3 columns">
 				<h5>Additional Links</h5>
 					<ul class="no-bullet">
-						<li><a href="#">Hurricane Guide</a></li>
-						<li><a href="#">Traffic Cameras</a></li>
+						<li><a href="#">Peper Colums</a></li>
+						<li><a href="#">Savvy Shopper</a></li>
+						<li><a href="#">Fitness Blog</a></li>
+						<li><a href="#">Anniversaries & Births</a></li>
+						<li><a href="#">Weddings & Engagements</a></li>
 					</ul>
 			</div><!--/col-->
 		</div><!--/row-->						
@@ -367,22 +399,19 @@
 
 	<div id="opinion-dropdown" data-dropdown-content class="menu-dropdown">
 		<div class="row">
-			<div class="small-3 columns">
+			<div class="small-2 columns">
 					<h5>Categories</h5>
 					<ul class="no-bullet">
-						<li><a href="#">Education</a></li>
-						<li><a href="#">Local/State News</a></li>
-						<li><a href="#">The South</a></li>
-						<li><a href="#">Politics</a></li>
-						<li><a href="#">Nation</a></li>
-						<li><a href="#">Obituaries</a></li>
+						<li><a href="#">Editorials</a></li>
+						<li><a href="#">Letters</a></li>
+						<li><a href="#">Commentary</a></li>
 					</ul>
 			</div><!--/col-->
-			<div class="small-6 columns">
+			<div class="small-7 columns">
 				<h5>Latest News</h5>
 				<div class="menu-story clearfix">
-				<a class="th" href="#"><img src="http://placehold.it/100x80"></a>
-				<h6 class="right">Sample Headline for a story blah blah blah</h6>
+				<a class="th left" href="#"><img src="http://placehold.it/100x80"></a>
+				<h6>Sample Headline for a story blah blah blah</h6>
 				</div>
 				<hr>
 				<h6>Sample Headline for a story blah blah blah</h6>
@@ -392,8 +421,8 @@
 			<div class="small-3 columns">
 				<h5>Additional Links</h5>
 					<ul class="no-bullet">
-						<li><a href="#">Hurricane Guide</a></li>
-						<li><a href="#">Traffic Cameras</a></li>
+						<li><a href="#">Submit a Letter</a></li>
+						<li><a href="#">Polls</a></li>
 					</ul>
 			</div><!--/col-->
 		</div><!--/row-->						
@@ -401,22 +430,22 @@
 
 	<div id="special-dropdown" data-dropdown-content class="menu-dropdown">
 		<div class="row">
-			<div class="small-3 columns">
+			<div class="small-2 columns">
 					<h5>Categories</h5>
 					<ul class="no-bullet">
-						<li><a href="#">Education</a></li>
-						<li><a href="#">Local/State News</a></li>
-						<li><a href="#">The South</a></li>
-						<li><a href="#">Politics</a></li>
-						<li><a href="#">Nation</a></li>
-						<li><a href="#">Obituaries</a></li>
+						<li><a href="#">Lowcountry Parent</a></li>
+						<li><a href="#">My Charleston</a></li>
+						<li><a href="#">North Charleston Magazine</a></li>
+						<li><a href="#">Real Estate</a></li>
+						<li><a href="#">Tideline Magazine</a></li>
+						<li><a href="#">Your Faith</a></li>
 					</ul>
 			</div><!--/col-->
-			<div class="small-6 columns">
+			<div class="small-7 columns">
 				<h5>Latest News</h5>
 				<div class="menu-story clearfix">
-				<a class="th" href="#"><img src="http://placehold.it/100x80"></a>
-				<h6 class="right">Sample Headline for a story blah blah blah</h6>
+				<a class="th left" href="#"><img src="http://placehold.it/100x80"></a>
+				<h6>Sample Headline for a story blah blah blah</h6>
 				</div>
 				<hr>
 				<h6>Sample Headline for a story blah blah blah</h6>
@@ -426,8 +455,7 @@
 			<div class="small-3 columns">
 				<h5>Additional Links</h5>
 					<ul class="no-bullet">
-						<li><a href="#">Hurricane Guide</a></li>
-						<li><a href="#">Traffic Cameras</a></li>
+						<li><a href="#">TBD</a></li>
 					</ul>
 			</div><!--/col-->
 		</div><!--/row-->						
@@ -436,107 +464,111 @@
 </div>
 </div>
 
-  	
+  	<section id="pushdown-row">
+  		<div class="row">
+  			<div class="small-12 columns">
+  				<div class="collapsed-pushdown-placeholder">
+  					Pushdown Ad
+  				</div>
+  			</div>
+  		</div>
+  	</section>
+
   	<div class="row jumbotron" style="margin-top:15px;">
   	
-  		<div class="large-7 columns">
-	  		<div class="row">
-	  			<div class="medium-8 columns no-pad-r">
-	  				<div class="panel image-panel news-border" style="height:280px; background-image: url(http://www.postandcourier.com/storyimage/CP/20140113/PC05/140119739/AR/0/AR-140119739.jpg&maxw=640&q=100);">
-	  					<div class="darken-image">
-	  						<h2>$19M highrise condo could set new high in Lowcountry’s home sales market</h2>
-	  					</div>
-	  				</div>
-	  			</div>
-	  			<div class="medium-4 columns">
-	  				<div class="panel image-panel news-border" style="height:280px; background-image:url(http://www.postandcourier.com/storyimage/CP/20140114/PC1610/140119709/AR/0/AR-140119709.jpg&maxw=640&q=100);">
-	  					<div class="darken-image">
-	  						<h4>House Speaker Harrell says investigation won’t distract House from its work</h4>
-	  					</div>
-	  				</div>
-	  			</div><!--/col-->
-	  		</div><!--/row-->
-	  		
-	  		<div class="row">
-	  			<div class="medium-4 columns no-pad-r">
-	  				<div class="panel image-panel entertainment-border" style="height:142px; background-image:url(http://www.postandcourier.com/storyimage/CP/20140114/PC11/140119701/AR/0/AR-140119701.jpg&maxw=640&q=100);">
+  		<div class="small-6 medium-3 columns">
+  			<div class="panel image-panel entertainment-border" style="height:150px; background-image:url(http://www.postandcourier.com/storyimage/CP/20140114/PC11/140119701/AR/0/AR-140119701.jpg&maxw=640&q=100);">
 	  					<div class="darken-image">
 	  						<h5>Got DirecTV? You don’t have the Weather Channel anymore</h5>
 	  					</div>
 	  				</div>
-	  			</div>
-	  			<div class="medium-8 columns">
-	  				<div class="panel dark-panel news-border"  style="height:142px;">
-	  					<h3>Boeing working with Japan Airlines on another 787 battery incident</h3>
-	  				</div>
-	  			</div>
-	  		</div>
   		</div>
-  		<div class="large-5 columns">
-  			<div class="row">
-	  			<div class="large-12 medium-8 columns">
-	  				<div class="row">
-	  					<div class="small-6 columns">
-			  				<div class="panel image-panel sports-border" style="height:170px; background-image: url(http://www.postandcourier.com/storyimage/CP/20140113/PC20/140119738/AR/0/AR-140119738.jpg&maxw=350&q=100);">
+
+  		<div class="small-6 medium-3 columns">
+  			<div class="panel dark-panel news-border"  style="height:150px;">
+	  					<h5>Boeing working with Japan Airlines on another 787 battery incident</h5>
+	  				</div>
+  		</div>
+
+  		<div class="small-6 medium-3 columns">
+  			<div class="panel image-panel sports-border" style="height:150px; background-image: url(http://www.postandcourier.com/storyimage/CP/20140113/PC20/140119738/AR/0/AR-140119738.jpg&maxw=350&q=100);">
 				  				<div class="darken-image">
 				  					<h5>Bryant, Breeland climbing upward to reach their dreams of NFL draft selection</h5>
 				  				</div>
 				  			</div>
-				  		</div><!--/col-->
-				  		<div class="small-6 columns">
-				  			<div class="panel dark-panel news-border" style="height:170px;">
+  		</div>
+
+  		<div class="small-6 medium-3 columns">
+  			<div class="panel dark-panel news-border" style="height:150px;">
 			  					<h5>Spending bill delays some flood insurance hikes</h5>
 			  				</div>
-				  		</div><!--/col-->
-				  	</div><!--/row-->
-	  			</div><!--/col-->
-	  			<div class="large-12 medium-4 columns">
-	  				<div class="panel" style="height:250px;">Advertisement Opportunity</div>
-	  			</div><!--/col-->
-  			</div><!--/row-->
   		</div>
-  		
+
   	</div>
-  	<div class="row">
+	 
+
+
+  	<div class="row" style="margin-top:20px;">
+  	
+		  		<div class="small-7 columns">
+		  			<div class="panel image-panel news-border" style="height:280px; background-image: url(http://www.postandcourier.com/storyimage/CP/20140113/PC05/140119739/AR/0/AR-140119739.jpg&maxw=640&q=100);">
+						<div class="darken-image">
+							<h2>$19M highrise condo could set new high in Lowcountry’s home sales market</h2>
+						</div>
+					</div>
+		  		</div><!--/col-->
+	  			<div class="small-5 columns">
+	  				<div class="panel" style="height:280px;">Advertisement Opportunity</div>
+	  			</div><!--/col-->
+
+	</div><!--/row-->
+
+  	<div class="row" style="margin-top:20px;">
   	
   		<div class="medium-8 columns">
-  			<h2 class="section-header">Local News</h2>
-  			<div class="row front-page-story-row">
-  				<div class="small-3 columns">
-  					<div class="panel image-panel news-border-r" style="height:140px; background-image: url(http://www.postandcourier.com/storyimage/CP/20140115/PC16/140119620/AR/0/AR-140119620.jpg&maxh=300&q=100);">
-		  			</div>
-  				</div>
-  				<div class="small-9 columns">
-  					<h4>Baby girl’s kidnappers still being sought; sheriff said incident was not random act</h4>
-  					<span class="label"><span class="icon-compass"></<span></span></span><span class="label secondary">39 minutes ago</span>
-  					<p>The 4-month-old girl appeared calm and gentle, intently sucking on a pacifier.</p>
-  				</div>
-  			</div>
-  			
-  			<div class="row front-page-story-row">
-  				<div class="small-3 columns">
-  					<div class="panel image-panel news-border-r" style="height:140px; background-image: url(http://www.postandcourier.com/storyimage/CP/20140115/PC05/140119603/AR/0/AR-140119603.jpg&maxh=300&q=100);">
-		  			</div>
-  				</div>
-  				<div class="small-9 columns">
-  					<h4>Charleston airport attorney’s contract dispute takes center stage</h4>
-  					<span class="label"><span class="icon-compass"></<span></span></span><span class="label secondary">2 hours ago</span>
-  					<p>The 4-month-old girl appeared calm and gentle, intently sucking on a pacifier.</p>
-  				</div>
+  			<div class="row">
+
+	  			<h2 class="section-header">Local News</h2>
+	  			<div class="row front-page-story-row">
+	  				<div class="small-7 columns">
+	  					<div class="panel image-panel news-border-b" style="height:220px; background-image: url(http://www.postandcourier.com/storyimage/CP/20140115/PC16/140119620/AR/0/AR-140119620.jpg&maxh=300&q=100);">
+			  			</div>
+			  			<h4>Baby girl’s kidnappers still being sought; sheriff said incident was not random act</h4>
+	  				</div>
+	  				<div class="small-5 columns">
+	  					<h5>Top headlines</h5>
+	  					<ul>
+	  						<li><h6>Charleston airport attorney’s contract dispute takes center stage</h6></li>
+	  						<li><h6>Greenville lawyer seeks shorter sentence in fraud</h6></li>
+	  						<li><h6>Another headline about something else, someone did something</h6></li>
+	  						<li><h6>One more headline: Why are people doing things?</h6></li>
+	  					</ul>
+	  				</div>
+	  			</div>
+
   			</div>
 
-  			<div class="row front-page-story-row">
-  				<div class="small-3 columns">
-  					<div class="panel dark-panel news-border-r" style="height:140px;">
-		  			</div>
-  				</div>
-  				<div class="small-9 columns">
-  					<h4>Greenville lawyer seeks shorter sentence in fraud</h4>
-  					<span class="label"><span class="icon-compass"></<span></span></span><span class="label secondary">3 hours ago</span>
-  					<p>The 4-month-old girl appeared calm and gentle, intently sucking on a pacifier.</p>
-  				</div>
-  			</div>
+  			<div class="row">
 
+	  			<h2 class="section-header">Sports</h2>
+	  			<div class="row front-page-story-row">
+	  				<div class="small-7 columns">
+	  					<div class="panel image-panel sports-border-b" style="height:220px; background-image: url(http://www.postandcourier.com/storyimage/CP/20140113/PC20/140119738/AR/0/AR-140119738.jpg&maxw=350&q=100);">
+			  			</div>
+			  			<h4>Bryant, Breeland climbing upward to reach their dreams of NFL draft selection</h4>
+	  				</div>
+	  				<div class="small-5 columns">
+	  					<h5>Top headlines</h5>
+	  					<ul>
+	  						<li><h6>Charleston airport attorney’s contract dispute takes center stage</h6></li>
+	  						<li><h6>Greenville lawyer seeks shorter sentence in fraud</h6></li>
+	  						<li><h6>Another headline about something else, someone did something</h6></li>
+	  						<li><h6>One more headline: Why are people doing things?</h6></li>
+	  					</ul>
+	  				</div>
+	  			</div>
+
+  			</div>
 
   		</div>
   		
