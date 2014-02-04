@@ -1,3 +1,43 @@
 @import "settings";
 @import "foundation";
 @import "custom-styles.scss";
+
+// STRUCTURAL STUFF
+
+.parent-row {
+	padding-left: $column-gutter / 2;
+	padding-right: $column-gutter / 2;
+}
+
+.dropdown-row {
+	padding-left: $column-gutter;
+	padding-right: $column-gutter;
+}
+
+.main-content-column {
+	width: 55%;
+	
+	@media #{$small-only} {
+		width:100%;
+	}
+	
+	@include grid-column(
+	$last-column:false,
+	$collapse:false,
+	$float:left
+	);
+}
+
+.sidebar-main {
+	width: 30%;
+	position: relative;
+	float: left;
+	padding-left: $column-gutter / 2;
+}
+
+.sidebar-slim {
+	width: 15%;
+	position: relative;
+	float: right;
+	padding-right: $column-gutter / 2;
+}

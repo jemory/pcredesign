@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hybrid</title>
     <link rel="stylesheet" href="stylesheets/app.css" />
+    <link rel="stylesheet" href="fonts/clarendon/stylesheet.css" type='text/css'/>
     <link rel="stylesheet" href="stylesheets/icomoo.css" />
     <link rel="stylesheet" href="stylesheets/climacons-font.css" />
     <link rel="stylesheet" href="bower_components/qunit/qunit/qunit.css" />
-    <script src="//use.edgefonts.net/vidaloka;old-standard.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
     <script src="bower_components/qunit/qunit/qunit.js"></script>
@@ -18,11 +18,11 @@
   <!--<div id="qunit"></div>
   <div id="qunit-fixture"></div>-->
   
-  <div data-alert data-options="animation_speed:50;" class="alert-box alert">
-  	<div class="row">
+  <div data-alert data-options="animation_speed:50;" class="alert-box alert fixed">
+  	<div class="row parent-row">
   		<div class="small-12 columns">
   			<span class="label black">Breaking News</span>
-  			This is a breaking headline. Winter is coming.
+  			Ravenel Bridge closed due to falling ice. Motorists advised to use I-526 instead.
   			<a href="#" class="close">&times;</a>
   		</div>
   	</div>
@@ -43,7 +43,7 @@
 			</div>
 		</div>
   	</div>
-  	<ul class="off-canvas-list show-for-small-only">
+  	<ul class="off-canvas-list hide-for-large-up">
   		<li><label>Sections</label></li>
   		<li><a href="#"><span class="icon-newspaper"></span> News</a></li>
   		<li><a href="#"><span class="icon-office"></span> Business</a></li>
@@ -95,7 +95,7 @@
   	</section>
   	
   	<section id="trending-row">
-	  	<div class="row">
+	  	<div class="row parent-row">
 	  		<div class="small-12 columns">
 	  			<dl class="sub-nav">
 	  				<dt>TRENDING</dt>
@@ -126,19 +126,8 @@
 						<span id="temp-icon" class="climacon thermometer medium-high climacon-2x"></span><span id="menu-weather-temp">37&deg;</span>
 					</a>
 				</li>
-				<div id="drop-weather" data-dropdown-content class="f-dropdown small content">
-					<div class="row">
-						<div class="small-6 columns">
-							<h6>Humidity</h6>
-							<h2>78<small>%</small></h2>
-						</div>
-						<div class="small-6 columns">
-							<h6>Winds</h6>
-							<h2>9.2<small>mph</small></h2>
-						</div>
-					</div>
-				</div>
-				<li class="has-form" id="menu-search-box">
+				
+				<li class="has-form show-for-large-up" id="menu-search-box">
 					<div class="row collapse">
 						<div class="small-1 columns">
   						<span class="icon-magnifier" id="menu-search-icon"></span>
@@ -155,7 +144,7 @@
   
   		</nav>
   	</div>
-  	<div class="contain-to-grid show-for-medium-up" id="lower-bar">
+  	<div class="contain-to-grid show-for-large-up" id="lower-bar">
   		<nav class="top-bar" data-topbar>
   		
   			<ul class="title-area">
@@ -188,21 +177,54 @@
   						<a href="#">Obituaries</a>
   					</li>
   					<li>
-  						<a href="#" data-dropdown="special-dropdown">Special Sections</a>
+  						<a href="#" data-dropdown="special-dropdown">Other Sites</a>
   					</li>
-  					
+  					<li>
+  						<a href="#">Classifieds</a>
+  					</li>
   				</ul>
   				<ul class="right">
   					<li><img src="img/menu-ad.jpg" alt="menu-ad" width="220" height="40"></li>
   				</ul>
-  			</section>
+  			</section><!--/nav bar section titles-->
   		
   		</nav>
 
-  	</div>
+  	</div><!--/lower nav bar-->
   	
-<div class="row">
+	<div data-alert data-options="animation_speed:50;" class="alert-box">
+		<div class="row parent-row">
+			<div class="small-12 columns">
+				<span class="label black">Special Coverage</span>
+				Follow our winter storm live blog <span class="alert-subheader">Our social media team brings you the latest updates</span>
+				<a href="#" class="close">&times;</a>
+			</div>
+		</div>
+	</div>
+  	
+<div class="row dropdown-row">
 <div class="medium-12 columns">
+
+	<div id="drop-weather" data-dropdown-content class="f-dropdown medium content">
+					<div class="row">
+						<div class="small-4 columns">
+							<h5 class="subheader">Weather</h5>
+							<ul class="no-bullet">
+								<li><a href="#">Forecast</a></li>
+								<li><a href="#">Cameras</a></li>
+								<li><a href="#">Radar</a></li>
+							</ul>
+						</div>
+						<div class="small-4 columns">
+							<h6 class="subheader">Humidity</h6>
+							<h2>78<small>%</small></h2>
+						</div>
+						<div class="small-4 columns">
+							<h6 class="subheader">Winds</h6>
+							<h2>9.2<small>mph</small></h2>
+						</div>
+					</div>
+				</div>
 	
 	<div id="news-dropdown" data-dropdown-content class="menu-dropdown">
 		<div class="row">
@@ -428,10 +450,10 @@
 		</div><!--/row-->						
 	</div><!--/dropdown-->
 
-	<div id="special-dropdown" data-dropdown-content class="menu-dropdown">
+	<div id="special-dropdown" data-dropdown-content class="f-dropdown content">
 		<div class="row">
-			<div class="small-2 columns">
-					<h5>Categories</h5>
+			<div class="small-12 columns">
+					<h5>Links</h5>
 					<ul class="no-bullet">
 						<li><a href="#">Lowcountry Parent</a></li>
 						<li><a href="#">My Charleston</a></li>
@@ -441,144 +463,356 @@
 						<li><a href="#">Your Faith</a></li>
 					</ul>
 			</div><!--/col-->
-			<div class="small-7 columns">
-				<h5>Latest News</h5>
-				<div class="menu-story clearfix">
-				<a class="th left" href="#"><img src="http://placehold.it/100x80"></a>
-				<h6>Sample Headline for a story blah blah blah</h6>
-				</div>
-				<hr>
-				<h6>Sample Headline for a story blah blah blah</h6>
-				<hr>
-				<h6>Sample Headline for a story blah blah blah</h6>
-			</div><!--/col-->
-			<div class="small-3 columns">
-				<h5>Additional Links</h5>
-					<ul class="no-bullet">
-						<li><a href="#">TBD</a></li>
-					</ul>
-			</div><!--/col-->
 		</div><!--/row-->						
 	</div><!--/dropdown-->
 	
 </div>
 </div>
 
-  	<section id="pushdown-row">
-  		<div class="row">
-  			<div class="small-12 columns">
-  				<div class="collapsed-pushdown-placeholder">
-  					Pushdown Ad
-  				</div>
-  			</div>
-  		</div>
-  	</section>
-
-  	<div class="row jumbotron" style="margin-top:15px;">
+<section id="hero">
+	<div class="row parent-row">
+		<div class="small-12 columns">
+			<div class="collapsed-pushdown-placeholder">
+				Pushdown Ad
+			</div>
+		</div>
+	</div>
+  	
+  	<div class="row parent-row jumbotron">
   	
   		<div class="small-6 medium-3 columns">
-  			<div class="panel image-panel entertainment-border" style="height:150px; background-image:url(http://www.postandcourier.com/storyimage/CP/20140114/PC11/140119701/AR/0/AR-140119701.jpg&maxw=640&q=100);">
-	  					<div class="darken-image">
-	  						<h5>Got DirecTV? You don’t have the Weather Channel anymore</h5>
-	  					</div>
-	  				</div>
+  			<div class="panel image-panel sports-border" style="height:150px; background-image:url(http://www.postandcourier.com/storyimage/CP/20140130/PC20/140139964/AR/0/AR-140139964.jpg&maxw=640&q=100);">
+				<a href="#" class="darken-image">
+					<h5>Young Gamecocks show growing maturation in first SEC win</h5>
+				</a>
+			</div>
   		</div>
 
   		<div class="small-6 medium-3 columns">
-  			<div class="panel dark-panel news-border"  style="height:150px;">
-	  					<h5>Boeing working with Japan Airlines on another 787 battery incident</h5>
-	  				</div>
+  			<div class="panel image-panel entertainment-border" style="height:150px; background-image: url(http://www.postandcourier.com/storyimage/CP/20140130/PC16/140139963/AR/0/AR-140139963.jpg&maxw=640&q=100);">
+  				<a href="#" class="darken-image">
+  					<h5>No doubt about it: Your black and white photos are great</h5>
+  				</a>
+  			</div>
   		</div>
 
   		<div class="small-6 medium-3 columns">
-  			<div class="panel image-panel sports-border" style="height:150px; background-image: url(http://www.postandcourier.com/storyimage/CP/20140113/PC20/140119738/AR/0/AR-140119738.jpg&maxw=350&q=100);">
-				  				<div class="darken-image">
-				  					<h5>Bryant, Breeland climbing upward to reach their dreams of NFL draft selection</h5>
-				  				</div>
-				  			</div>
+  			<div class="panel image-panel news-border" style="height:150px; background-image: url(http://www.postandcourier.com/storyimage/CP/20140130/PC16/140139961/AR/0/AR-140139961.jpg&maxw=640&q=100);">
+  				<a href="#" class="darken-image">
+  					<h5>Federal officials, NFL seize websites selling counterfeit merchandise</h5>
+  				</a>
+  			</div>
   		</div>
 
   		<div class="small-6 medium-3 columns">
-  			<div class="panel dark-panel news-border" style="height:150px;">
-			  					<h5>Spending bill delays some flood insurance hikes</h5>
-			  				</div>
+  			<div class="panel image-panel sports-border" style="height:150px; background-image: url(http://www.postandcourier.com/storyimage/CP/20140130/PC1610/140139960/AR/0/AR-140139960.jpg&maxw=640&q=100);">
+  				<a href="#" class="darken-image">
+  					<h5>Georgia governor takes blame for storm preparations</h5>
+  				</a>
+  			</div>
   		</div>
 
   	</div>
 	 
-
-
-  	<div class="row" style="margin-top:20px;">
+  	<div class="row parent-row jumbotron">
   	
-		  		<div class="small-7 columns">
-		  			<div class="panel image-panel news-border" style="height:280px; background-image: url(http://www.postandcourier.com/storyimage/CP/20140113/PC05/140119739/AR/0/AR-140119739.jpg&maxw=640&q=100);">
-						<div class="darken-image">
-							<h2>$19M highrise condo could set new high in Lowcountry’s home sales market</h2>
-						</div>
-					</div>
-		  		</div><!--/col-->
-	  			<div class="small-5 columns">
-	  				<div class="panel" style="height:280px;">Advertisement Opportunity</div>
-	  			</div><!--/col-->
+		<div class="small-12 medium-7 columns">
+			<div class="panel image-panel news-border" style="height:280px; background-image: url(http://www.postandcourier.com/storyimage/CP/20140131/PC16/140139900/AR/0/AR-140139900.jpg&maxw=640&q=100);">
+				<a href="#" class="darken-image">
+					<h2>Ravenel Bridge closed after ice chunks hit vehicles</h2>
+				</a>
+			</div>
+		</div><!--/col-->
+		
+		<div class="small-12 medium-5 columns">
+			<div class="panel" style="height:280px;">Advertisement Opportunity</div>
+		</div><!--/col-->
 
 	</div><!--/row-->
+</section>
 
-  	<div class="row" style="margin-top:20px;">
-  	
-  		<div class="medium-8 columns">
-  			<div class="row">
+		
+<section id="content">
+	<div class="row parent-row main-content-row">
+	
+		<div class="main-content-column">
+		
+			<div class="row">
+				<div class="small-12 columns news-section-head">
+					<h2 class="section-header">
+						<span class="icon-label galleries"><span class="icon-pictures2"></span></span>
+						Photo Galleries
+					</h2>
+				</div><!--/section-head-col-->
+			</div><!--/section-head-row-->
+			
+			<div class="row">
+				<div class="small-12 columns galleries-section-body">
+					<ul class="small-block-grid-2 medium-block-grid-4">
+						<li>
+							<img class="th" src="http://www.postandcourier.com/apps/pbcsi.dll/bilde?Site=CP&Date=20140131&Category=PC16&ArtNo=130009995&Ref=PH&Item=1&NewTbl=1&MaxW=150&MaxH=120">
+							<h6>After the Winter Storm</h6>
+						</li>
+						<li>
+							<img class="th" src="http://www.postandcourier.com/apps/pbcsi.dll/bilde?Site=CP&Date=20140130&Category=PC16&ArtNo=130009997&Ref=PH&Item=1&NewTbl=1&MaxW=150&MaxH=120">
+							<h6>Black and White Photos</h6>
+						</li>
+						<li>
+							<img class="th" src="http://www.postandcourier.com/apps/pbcsi.dll/bilde?Site=CP&Date=20140129&Category=PC16&ArtNo=129009997&Ref=PH&Item=1&NewTbl=1&MaxW=150&MaxH=120">
+							<h6>Your Winter Weather Photos</h6>
+						</li>
+						<li>
+							<img class="th" src="http://www.postandcourier.com/apps/pbcsi.dll/bilde?Site=CP&Date=20140130&Category=PC1206&ArtNo=130009999&Ref=PH&Item=1&NewTbl=1&MaxW=150&MaxH=120">
+							<h6>Barsa Restaurant</h6>
+						</li>
+					</ul>
+				</div><!--/section-content-col-->
+			</div><!--/section-head-row-->
+			
+			<hr>
+			
+			<div class="row">
+				<div class="small-12 columns news-section-body">
+					<div class="row front-page-story-row">
+						<div class="small-12 columns">
+							<h2 class="section-header">
+								<span class="icon-label news"><span class="icon-newspaper"></span></span>
+								Local News
+							</h2>
+						</div>
+		  				<div class="small-12 medium-6 columns">
+		  					<div class="panel image-panel news-border-b" style="height:220px; background-image: url(http://www.postandcourier.com/storyimage/CP/20140130/PC12/140139951/AR/0/AR-140139951.jpg&maxw=640&q=100);">
+				  			</div>
+				  			<h4><a href="#">Charleston mother, daughter scale Mount Kilimanjaro</a></h4>
+		  				</div>
+		  				<div class="small-12 medium-6 columns">
+		  					<ul class="headline-list">
+		  						<li class="news has-thumbnail"><div class="thumb-wrapper" style="background-image:url(http://www.postandcourier.com/storyimage/CP/20140130/PC1610/140139979/AR/0/AR-140139979.jpg&exactW=150&exactH=150);"><a href="#">Where's my car? Storm clean up underway in Atlanta</a></div></li>
+		  						<li class="news"><a href="#">Thursday's high school sports events postponed due to weather, hazardous road conditions</a></li>
+		  						<li class="news has-thumbnail"><div class="thumb-wrapper" style="background-image:url(http://www.postandcourier.com/storyimage/CP/20140129/PC05/140129340/AR/0/AR-140129340.jpg&exactW=150&exactH=150);"><a href="#">Boeing reports record revenue, earnings but 2014 forecast disappoints</a></div></li>
+		  						<li class="news"><a href="#">One more headline: Why are people doing things?</a></li>
+		  					</ul>
+		  				</div>
+		  			</div>
+				</div><!--/section-content-col-->
+			</div><!--/section-head-row-->
+			
+			<hr>
+			
+			<div class="row">
+				<div class="small-12 columns sports-section-head">
+					<div class="row front-page-story-row">
+						<div class="small-12 columns">
+							<h2 class="section-header">
+								<span class="icon-label sports"><span class="icon-football"></span></span>
+								Sports
+							</h2>
+						</div>
+		  				<div class="small-12 medium-6 columns">
+		  					<div class="panel image-panel sports-border-b" style="height:220px; background-image: url(http://www.postandcourier.com/storyimage/CP/20140129/PC20/140139999/AR/0/AR-140139999.jpg&maxw=300&q=100);">
+				  			</div>
+				  			<h4><a href="#">Javy Lopez recalls 'goofy' Greg Maddux, 'serious' Tom Glavine, respect for Bobby Cox</a></h4>
+		  				</div>
+		  				<div class="small-12 medium-6 columns">
+		  					<ul class="headline-list">
+		  						<li class="sports has-thumbnail"><div class="thumb-wrapper" style="background-image:url(http://www.postandcourier.com/storyimage/CP/20140129/PC20/140129328/AR/0/AR-140129328.jpg&maxw=640&q=100);"><a href="#">Thursday's high school sports events postponed due to weather, hazardous road conditions</a></div></li>
+		  						<li class="sports"><a href="#">MEN'S BASKETBALL: Young Gamecocks show growing maturation in first SEC win</a></li>
+		  						<li class="sports"><a href="#">Charleston Southern loses at Campbell, 65-57</a></li>
+		  						<li class="sports"><a href="#">MEN'S BASKETBALL: Gamecocks get first SEC win, beat Texas A&M 80-52</a></li>
+		  					</ul>
+		  				</div>
+		  			</div>
+				</div><!--/section-content-col-->
+			</div><!--/section-head-row-->
+			
+			<hr>
+			
+			<div class="row">
+				<div class="small-12 columns sports-section-head">
+					<div class="row front-page-story-row">
+						<div class="small-12 columns">
+							<h2 class="section-header">
+								<span class="icon-label food"><span class="icon-food"></span></span>
+								Food
+							</h2>
+						</div>
+		  				<div class="small-12 medium-6 columns">
+		  					<div class="panel image-panel food-border-b" style="height:220px; background-image: url(http://www.postandcourier.com/storyimage/CP/20140127/PC1206/140129468/AR/0/AR-140129468.jpg&maxw=640&q=100);">
+				  			</div>
+				  			<h4><a href="#">Cooking up new books:</h4><h5 class="subheader">Charleston's Lee brothers put on 'boot camp' for chefs aspiring to write a cookbook</h5></a>
+		  				</div>
+		  				<div class="small-12 medium-6 columns">
+		  					<ul class="headline-list">
+		  						<li class="food has-thumbnail"><div class="thumb-wrapper" style="background-image:url(http://www.postandcourier.com/apps/pbcsi.dll//storyimage/CP/20140127/PC1206/140129450/AR/0/AR-140129450.jpg&exactW=150&exactH=100&AlignH=center);"><a href="#">'Simple' okra soup a Lowcountry staple</a></div></li>
+		  						<li class="food has-thumbnail"><div class="thumb-wrapper" style="background-image:url(http://www.postandcourier.com/apps/pbcsi.dll//storyimage/CP/20140121/PC1206/140129909/AR/0/AR-140129909.jpg&exactW=125&exactH=100&AlignH=center);"><a href="#">Brandade: A puree of fish, olive oil and potatoes</a></div></li>
+		  						<li class="food has-thumbnail"><div class="thumb-wrapper" style="background-image:url(http://www.postandcourier.com/apps/pbcsi.dll//storyimage/CP/20140127/PC1206/140129466/AR/0/AR-140129466.jpg&exactW=125&exactH=120&AlignH=center);"><a href="#">Fried eggs, smoked brisket tacos and more: What Pinaki Santra ate in a day</a></div></li>
+		  						<li class="food has-thumbnail"><div class="thumb-wrapper" style="background-image:url(http://www.postandcourier.com/apps/pbcsi.dll//storyimage/CP/20140128/PC1206/140129401/AR/0/0/AR-140129401.jpg&exactW=150&exactH=100&AlignH=center);"><a href="#">A healthy chicken soup with Chinese influences</a></div></li>
+		  					</ul>
+		  				</div>
+		  			</div>
+				</div><!--/section-content-col-->
+			</div><!--/section-head-row-->
+			
+			<hr>
+			
+			<div class="row">
+				<div class="small-12 columns sports-section-head">
+					<div class="row front-page-story-row">
+						<div class="small-12 columns">
+							<h2 class="section-header">
+								<span class="icon-label opinion"><span class="icon-quote"></span></span>
+								Opinion
+							</h2>
+						</div>
+		  				<div class="small-12 medium-8 columns">
+		  					<ul class="editorial-list no-bullet">
+		  						<li><a href="#"><h3 class="editorial-headline">Budget enough for school buses</h3></a></li>
+		  						<li><a href="#"><h3 class="editorial-headline">No half-measures for the Ukraine</h3></a></li>
+		  					</ul>
+		  					<ul class="columnist-list no-bullet">
+		  						<li><a href="#"><h6 class="subheader">Kathleen Parker</h6><h5>Colleges see skyrocketing costs, diminishing returns</h5></a></li>
+		  						<li><a href="#"><h6 class="subheader">R.L. Schreadley</h6><h5>Argentina's point of no return</h5></a></li>
+		  						<li><a href="#"><h6 class="subheader">Peggy Clement & Heather Templeton</h6><h5>DeReef Park: Let's get it right</h5></a></li>
+		  					</ul>
+		  				</div>
+		  				<div class="small-12 medium-4 columns">
+		  					<div class="panel opinion-border-r">
+		  						<h5>Letters to the Editor</h5>
+		  						<ul class="letters-list square">
+		  							<li><a href="#"><h6>Leaf attack</h6></a></li>
+		  							<li><a href="#"><h6>Harrell probe</h6></a></li>
+		  							<li><a href="#"><h6>New food section</h6></a></li>
+		  							<li><a href="#"><h6>Limits needed</h6></a></li>
+		  							<li><a href="#"><h6>Oyster success</h6></a></li>
+		  							<li><a href="#"><h6>An act of caring</h6></a></li>
+		  						</ul>
+		  					</div>
+		  				</div>
+		  			</div>
+				</div><!--/section-content-col-->
+			</div><!--/section-head-row-->
+			
+			
+		</div><!--/section-col-->
+		
+		<div class="sidebar-main">
+			
+			<div class="sidebar-panel">
+				<h4>Latest News</h4>
+				<ul class="no-bullet latest-news-list">
+					<li><a class="th right" href="#"><img src="http://www.postandcourier.com/storyimage/CP/20140203/PC1601/140209837/AR/0/AR-140209837.jpg&exactw=62&exacth=62&q=100"></a><span class="timestamp">23 Minutes ago</span><a href="#">Winter storm takes aim at East, closes schools</a></li>
+					<li><a class="th right" href="#"><img src="http://www.postandcourier.com/storyimage/CP/20140203/PC1601/140209838/AR/0/AR-140209838.jpg&exactw=62&exacth=62&q=100"></a><span class="timestamp">34 Minutes ago</span><a href="#">Romance sizzles at Iowa bacon festival as 2 couples marry</a></li>
+					<li><span class="timestamp">52 Minutes ago</span><a href="#">$5 million bond set for Ohio man accused of setting fire that killed 2 firefighters</a></li>
+				</ul>
+				<img src="http://placehold.it/300x250">
+				<ul class="no-bullet latest-news-list">
+					<li><span class="timestamp">52 Minutes ago</span><a href="#">Romance sizzles at Iowa bacon festival as 2 couples marry</a></li>
+					<li><span class="timestamp">1 hour ago</span><a href="#">$5 million bond set for Ohio man accused of setting fire that killed 2 firefighters</a></li>
+				</ul>
+				<img src="http://placehold.it/300x100">
+				<ul class="no-bullet latest-news-list">
+					<li><span class="timestamp">1 hour ago</span><a href="#">James Island development meeting Tuesday</a></li>
+					<li><span class="timestamp">1 hour ago</span><a href="#">Convicted murderer escapes from Michigan prison</a></li>
+					<li><span class="timestamp">2 hours ago</span><a href="#">Behind the curtain of MeadWestvaco's $1.5B land deal</a></li>
+				</ul>
+				<img src="http://placehold.it/300x100">
+				<ul class="no-bullet latest-news-list">
+					<li><span class="timestamp">2 hours ago</span><a href="#">James Island development meeting Tuesday</a></li>
+					<li><span class="timestamp">2 hours ago</span><a href="#">Convicted murderer escapes from Michigan prison</a></li>
+					<li><span class="timestamp">2 hours ago</span><a href="#">Behind the curtain of MeadWestvaco's $1.5B land deal</a></li>
+				</ul>
+				<img src="http://placehold.it/300x250">
+			</div>
+			
+		</div><!--/col-->
+		
+		<div class="sidebar-slim">
+			<img src="http://placehold.it/160x600">
+			
+			<div class="panel frontpage-poll">
+				<h4>Poll</h4>
+				<label>Do you like the new site?</label>
+				<input type="radio" name="poll" value="yes" id="option1"><label for="option1">Yes</label><br>
+				<input type="radio" name="poll" value="no" id="option2"><label for="option2">No</label>
+				<a href="#" class="poll-submit">Submit</a>
+			</div>
+			
+			<div class="twitter-button">
+				<span class="icon-twitter2"></span>
+			</div>
+			
+			<div class="facebook-button">
+				<span class="icon-facebook"></span>
+			</div>
+		</div><!--/col-->
+		
+	</div><!--/row-->
+</section>
+	
+	<div class="fullscreen-parralax-ad">
+		<a href="#">
+			<h1>Full screen, parallax ad.</h1>
+		</a>
+	</div>
+	
+	<section id="footer">
+	
+	<div class="row">
+	
+		<div class="medium-5 columns">
+			<img class="footer-logo" src="http://www.postandcourier.com/images/pclogo.png">
+			<p class="text-center">© 2014, The Post and Courier, an Evening Post Industries company.<br> All Rights Reserved.</p>
+			<p class="text-center">Registration on or use of this site constitutes acceptance of Term of Use, Parental Consent Form, and Privacy Policy.</p>
+		</div>
+		
+		<div class="medium-7 columns">
+		
+			<div class="row">
+			
+				<div class="medium-4 columns">
+					<h6 class="text-center">About</h6>
+					<ul class="no-bullet text-center">
+						<li><a href="#">About</a></li>
+						<li><a href="#">Staff</a></li>
+						<li><a href="#">Mobile apps</a></li>
+					</ul>
+				</div>
+				<div class="medium-4 columns">
+					<h6 class="text-center">Services</h6>
+					<ul class="no-bullet text-center">
+						<li><a href="#">Newsletters</a></li>
+						<li><a href="#">Become a member</a></li>
+						<li><a href="#">Place an ad</a></li>
+						<li><a href="#">Advertising rates</a></li>
+						<li><a href="#">Advertising account</a></li>
+					</ul>
+				</div>
+				<div class="medium-4 columns">
+					<h6 class="text-center">Site Links</h6>
+					<ul class="no-bullet text-center">
+						<li><a href="#">Supplements</a></li>
+						<li><a href="#">Blogs</a></li>
+						<li><a href="#">Editorial</a></li>
+						<li><a href="#">Classifieds</a></li>
+					</ul>
+				</div>
+			
+			</div>
+			
+			<div class="row">
+			
+				<div class="medium-12 columns">
+					<h6>Related Properties</h6>
+				</div>
+			
+			</div>
+		
+		</div>
+	
+	</div>
+	
+	</section>
 
-	  			<h2 class="section-header">Local News</h2>
-	  			<div class="row front-page-story-row">
-	  				<div class="small-7 columns">
-	  					<div class="panel image-panel news-border-b" style="height:220px; background-image: url(http://www.postandcourier.com/storyimage/CP/20140115/PC16/140119620/AR/0/AR-140119620.jpg&maxh=300&q=100);">
-			  			</div>
-			  			<h4>Baby girl’s kidnappers still being sought; sheriff said incident was not random act</h4>
-	  				</div>
-	  				<div class="small-5 columns">
-	  					<h5>Top headlines</h5>
-	  					<ul>
-	  						<li><h6>Charleston airport attorney’s contract dispute takes center stage</h6></li>
-	  						<li><h6>Greenville lawyer seeks shorter sentence in fraud</h6></li>
-	  						<li><h6>Another headline about something else, someone did something</h6></li>
-	  						<li><h6>One more headline: Why are people doing things?</h6></li>
-	  					</ul>
-	  				</div>
-	  			</div>
-
-  			</div>
-
-  			<div class="row">
-
-	  			<h2 class="section-header">Sports</h2>
-	  			<div class="row front-page-story-row">
-	  				<div class="small-7 columns">
-	  					<div class="panel image-panel sports-border-b" style="height:220px; background-image: url(http://www.postandcourier.com/storyimage/CP/20140113/PC20/140119738/AR/0/AR-140119738.jpg&maxw=350&q=100);">
-			  			</div>
-			  			<h4>Bryant, Breeland climbing upward to reach their dreams of NFL draft selection</h4>
-	  				</div>
-	  				<div class="small-5 columns">
-	  					<h5>Top headlines</h5>
-	  					<ul>
-	  						<li><h6>Charleston airport attorney’s contract dispute takes center stage</h6></li>
-	  						<li><h6>Greenville lawyer seeks shorter sentence in fraud</h6></li>
-	  						<li><h6>Another headline about something else, someone did something</h6></li>
-	  						<li><h6>One more headline: Why are people doing things?</h6></li>
-	  					</ul>
-	  				</div>
-	  			</div>
-
-  			</div>
-
-  		</div>
-  		
-  		<div class="medium-4 columns">
-  			<ul class="pricing-table">
-  				<li class="title">Sidebar</li>
-  				<li class="description" style="height: 800px;">This is the content of the sidebar. Use your immagination for now!</li>
-  			</ul>
-  		</div>
-  	</div>
   
   <a class="exit-off-canvas"></a>	
   </div>

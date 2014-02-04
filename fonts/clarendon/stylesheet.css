@@ -1,0 +1,71 @@
+/*
+ * Web Fonts from fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and 
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2013 Fontspring
+ *
+ *
+ *
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      FontSite Inc.
+ * License URL: http://www.fontspring.com/fflicense/fontsite
+ *
+ *
+ */
+
+@font-face {
+    font-family: 'Clarendon';
+    src: url('Clarendon-Light-webfont.eot');
+    src: url('Clarendon-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Clarendon-Light-webfont.woff') format('woff'),
+         url('Clarendon-Light-webfont.ttf') format('truetype'),
+         url('Clarendon-Light-webfont.svg#ClarendonFSRegular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Clarendon';
+    src: url('Clarendon-Medium-webfont.eot');
+    src: url('Clarendon-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Clarendon-Medium-webfont.woff') format('woff'),
+         url('Clarendon-Medium-webfont.ttf') format('truetype'),
+         url('Clarendon-Medium-webfont.svg#ClarendonFSMediumRegular') format('svg');
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Clarendon';
+    src: url('Clarendon-Bold-webfont.eot');
+    src: url('Clarendon-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Clarendon-Bold-webfont.woff') format('woff'),
+         url('Clarendon-Bold-webfont.ttf') format('truetype'),
+         url('Clarendon-Bold-webfont.svg#ClarendonFSBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Clarendon';
+    src: url('Clarendon-Xbold-webfont.eot');
+    src: url('Clarendon-Xbold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Clarendon-Xbold-webfont.woff') format('woff'),
+         url('Clarendon-Xbold-webfont.ttf') format('truetype'),
+         url('Clarendon-Xbold-webfont.svg#ClarendonFSMediumBold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+
+}
